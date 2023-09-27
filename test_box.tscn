@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://debb24qnoeu05"]
+
+[ext_resource type="Script" path="res://TestBox.gd" id="1_dk3sd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_apqb2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lgx13"]
+
+[node name="TestBox" type="Area3D"]
+script = ExtResource("1_dk3sd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_apqb2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_lgx13")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2, 4)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.991872, -0.0722822, 0.104713, -0.0547452, 0.500459, 0.864028, -0.114858, -0.862737, 0.492435, 3.87765, 2.70368, 3.15355)
